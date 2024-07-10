@@ -28,10 +28,9 @@ const HomePage = (): JSX.Element => {
       <section>
         <h2>KNOW YOUR HEROES</h2>
         <p>
-          These are some randoms words that will be replaced as soon a possible.
-          The purpose of these words is to serve as a correct placholder. I need
-          more lines of text to correctly fill the expected space. I'm still
-          writing because I need much more text on my screen.
+          Discover the Stories Behind the Legends. From historical icons to
+          modern-day changemakers, we bring you closer to the individuals who
+          have shaped our country.
         </p>
         <a href="#unknown-do-NOT-click">
           {/* href for this button is currently unknown */}
@@ -46,10 +45,7 @@ const HomePage = (): JSX.Element => {
         <h3>There's more about the pride of Nigeria than you think.</h3>
         <div className={styles.aboutPrideOfNigeriaCardContainer}>
           <div className={styles.aboutCard}>
-            <img
-              src="/ts.png"
-              alt="placeholder"
-            />
+            <img src="/ts.png" alt="placeholder" />
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
               minima porro, ut hic doloremque, voluptate dolore ad, deserunt
@@ -58,10 +54,7 @@ const HomePage = (): JSX.Element => {
             </p>
           </div>
           <div className={styles.aboutCard}>
-            <img
-              src="/ts.png"
-              alt="placeholder"
-            />
+            <img src="/ts.png" alt="placeholder" />
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
               minima porro, ut hic doloremque, voluptate dolore ad, deserunt
@@ -70,10 +63,7 @@ const HomePage = (): JSX.Element => {
             </p>
           </div>
           <div className={styles.aboutCard}>
-            <img
-              src="/ts.png"
-              alt="placeholder"
-            />
+            <img src="/ts.png" alt="placeholder" />
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
               minima porro, ut hic doloremque, voluptate dolore ad, deserunt
@@ -82,10 +72,7 @@ const HomePage = (): JSX.Element => {
             </p>
           </div>
           <div className={styles.aboutCard}>
-            <img
-              src="/ts.png"
-              alt="placeholder"
-            />
+            <img src="/ts.png" alt="placeholder" />
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
               minima porro, ut hic doloremque, voluptate dolore ad, deserunt
@@ -126,10 +113,7 @@ const HomePage = (): JSX.Element => {
                 </button>
               </div>
               <div>
-                <img
-                  src="/Rectangle 8.svg"
-                  alt="people smiling"
-                />
+                <img src="/Rectangle 8.svg" alt="people smiling" />
               </div>
             </div>
             <div className={styles.card}>
@@ -147,10 +131,7 @@ const HomePage = (): JSX.Element => {
                 </button>
               </div>
               <div>
-                <img
-                  src="/Rectangle 8.svg"
-                  alt="people smiling"
-                />
+                <img src="/Rectangle 8.svg" alt="people smiling" />
               </div>
             </div>
           </div>
@@ -159,51 +140,25 @@ const HomePage = (): JSX.Element => {
       <section className={styles.largeFrameShortVideosOnHomePage}>
         <LargeFrameShortVideosOnHomePage />
       </section>
-      <section
-        id="ourPartners"
-        className={styles.ourPartnersContainer}
-      >
+      <section id="ourPartners" className={styles.ourPartnersContainer}>
         <h3>OUR PARTNERS</h3>
         <div>
           <p>
-            This is a placeholder text for the content that is going to be here.
-            Typing random words to fill in the space.
+            We are proud to collaborate with organizations that share our vision
+            of celebrating heroism and inspiring change. Our partners help us
+            bring these incredible stories to a wider audience.
           </p>
         </div>
         <div></div>
         <div>
-          <img
-            src="/logo512.png"
-            alt="placholder partner"
-          />
-          <img
-            src="/logo512.png"
-            alt="placholder partner"
-          />
-          <img
-            src="/logo512.png"
-            alt="placholder partner"
-          />
-          <img
-            src="/logo512.png"
-            alt="placholder partner"
-          />
-          <img
-            src="/logo512.png"
-            alt="placholder partner"
-          />
-          <img
-            src="/logo512.png"
-            alt="placholder partner"
-          />
-          <img
-            src="/logo512.png"
-            alt="placholder partner"
-          />
-          <img
-            src="/logo512.png"
-            alt="placholder partner"
-          />
+          <img src="/logo512.png" alt="placholder partner" />
+          <img src="/logo512.png" alt="placholder partner" />
+          <img src="/logo512.png" alt="placholder partner" />
+          <img src="/logo512.png" alt="placholder partner" />
+          <img src="/logo512.png" alt="placholder partner" />
+          <img src="/logo512.png" alt="placholder partner" />
+          <img src="/logo512.png" alt="placholder partner" />
+          <img src="/logo512.png" alt="placholder partner" />
         </div>
       </section>
       <section className={styles.secondPromotionsSection}>
@@ -218,10 +173,7 @@ const HomePage = (): JSX.Element => {
       </section>
       <section className={styles.supportPrideOfNigeriaContainer}>
         <div className={styles.supportPrideOfNgGradient}></div>
-        <img
-          src="/Rectangle 9.png"
-          alt="placeholder background img"
-        />
+        <img src="/Rectangle 9.png" alt="placeholder background img" />
         <div>
           <h2>SUPPORT THE NEXT PRIDE OF NIGERIA</h2>
           <a href="#unknown-do-NOT-click">

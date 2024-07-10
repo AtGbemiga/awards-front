@@ -6,26 +6,21 @@ function AboutUsPage() {
   return (
     <div>
       <SubHeading value="ABOUT PRIDE OF NIGERIA" />
-      <p className={styles.aboutP}>
-        The Daily Mirror's Pride of Britain Awards with TSB, celebrate the
-        achievements of truly remarkable people who make our world a better
-        place. Screened on ITV in October, it is the biggest awards show of its
-        kind on British TV. Nominated by the public, the winners are from all
-        walks of life, of all ages, and from all over the country. Their
-        achievements are awe-inspiring and a lesson to us all. They say they are
-        ordinary people, but their acts are truly extraordinary. Since the first
-        Pride of Britain in 1999, royalty, prime ministers, and hundreds of
-        leading figures from showbusiness, sport, politics and the arts have all
-        taken part. Hosted by Carol Vorderman and Ashley Banjo, the Awards are
-        screened in a primetime slot on ITV, where it is the highest rated
-        awards show of its kind on British television.. Our winners come from
-        tens of thousands of public nominations and stories of remarkable
-        individuals discovered by our team of researchers. They are whittled
-        down to a shortlist from which our judging panel, made up of celebrated
-        figures in national life, chooses the winners. They are honoured at the
-        glittering annual Pride of Britain Awards dinner at the Grosvenor House
-        in London.
-      </p>
+      <p className={styles.aboutP}></p>
+      <ol>
+        <li>
+          The Pride of Nigeria was founded with the belief that every hero's
+          journey deserves to be celebrated. Our team is dedicated to uncovering
+          and sharing the stories that inspire, educate, and motivate people
+          across Nigeria and beyond.
+        </li>
+        <li>
+          Our mission- Our mission is to highlight the incredible achievements
+          and personal journeys of Nigerian heroes from all walks of life.
+          Through in-depth biographies, interviews, and exclusive content, we
+          aim to inspire and educate our audience
+        </li>
+      </ol>
       <WinnersOnHomePage />
     </div>
   );
