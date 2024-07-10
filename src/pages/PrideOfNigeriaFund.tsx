@@ -31,6 +31,15 @@ function PrideOfNigeriaFundPage() {
         break;
     }
   };
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/Apple-Developer-Agreement-20240610-English.pdf"; // change the path
+    link.download = "Apple-Developer-Agreement-20240610-English.pdf"; // change the file name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <article>
       <SubHeading value="PRIDE OF NIGERIA FUND" />
@@ -151,7 +160,7 @@ function PrideOfNigeriaFundPage() {
               proposed programmes. Then we can discuss other requirements and
               licencing for the organization to start its operations.
             </p>
-            <button>DOWNLOAD FORM</button>
+            <button onClick={handleDownload}>DOWNLOAD FORM</button>
           </div>
         </div>
       </section>
