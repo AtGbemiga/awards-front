@@ -1,9 +1,9 @@
+import { baseURL } from "../../components/constants/url";
 import { Response } from "../../typesAndInterfaces/getShowcasedNominationsOnTheNominationPage";
 
 async function getShowcasedNominationsOnTheNominationPageFn(): Promise<Response> {
   // returns the most current posts
-  const url =
-    "https://e-awards.ooshinfo.com/api/v1/nominate/getShowcasedNominationsOnTheNominationPage";
+  const url = `${baseURL}/nominate/getShowcasedNominationsOnTheNominationPage`;
 
   const res = await fetch(url, {
     method: "GET",

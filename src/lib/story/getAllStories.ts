@@ -1,3 +1,5 @@
+import { baseURL } from "../../components/constants/url";
+
 export interface GetAllStoriesResponse {
   stories: Story[];
 }
@@ -11,7 +13,7 @@ export interface Story {
 }
 
 async function getAllStoriesFn(): Promise<GetAllStoriesResponse> {
-  const url = "https://e-awards.ooshinfo.com/api/v1/story";
+  const url = `${baseURL}/story`;
 
   const res = await fetch(url, {
     method: "GET",

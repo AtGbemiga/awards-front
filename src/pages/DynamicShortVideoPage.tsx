@@ -19,6 +19,7 @@ import {
   LinkedinShareButton,
 } from "react-share";
 import stylesThree from "./styles/dynamicGroupPageReusable.module.css/aboutGroupsArea.module.css";
+import { baseURL } from "../components/constants/url";
 
 function DynamicShortVideoPage() {
   const token = Cookies.get("token");
@@ -151,7 +152,7 @@ function DynamicShortVideoPage() {
                 <div className={stylesThree.shareGroupDivInShortVideos}>
                   <div className="Demo__some-network">
                     <WhatsappShareButton
-                      url={`https://e-awards.ooshinfo.com/api/v1/shortVideos/getFullInfo?video_id=${reel.short_videos_id}`}
+                      url={`${baseURL}/shortVideos/getFullInfo?video_id=${reel.short_videos_id}`}
                       title={`Pride of Nigeria | ${reel.username}`}
                       separator=":: "
                       className={`Demo__some-network__share-button ${stylesThree.icon}`}
@@ -161,7 +162,7 @@ function DynamicShortVideoPage() {
                   </div>
                   <div className="Demo__some-network">
                     <FacebookShareButton
-                      url={`https://e-awards.ooshinfo.com/api/v1/shortVideos/getFullInfo?video_id=${reel.short_videos_id}`}
+                      url={`${baseURL}/shortVideos/getFullInfo?video_id=${reel.short_videos_id}`}
                       className={`Demo__some-network__share-button ${stylesThree.icon}`}
                     >
                       <FacebookIcon size={32} round />
@@ -169,7 +170,7 @@ function DynamicShortVideoPage() {
                   </div>
                   <div className="Demo__some-network">
                     <TwitterShareButton
-                      url={`https://e-awards.ooshinfo.com/api/v1/shortVideos/getFullInfo?video_id=${reel.short_videos_id}`}
+                      url={`${baseURL}/shortVideos/getFullInfo?video_id=${reel.short_videos_id}`}
                       title={`Pride of Nigeria | ${reel.username}`}
                       className={`Demo__some-network__share-button ${stylesThree.icon}`}
                     >
@@ -178,7 +179,7 @@ function DynamicShortVideoPage() {
                   </div>
                   <div className="Demo__some-network">
                     <LinkedinShareButton
-                      url={`https://e-awards.ooshinfo.com/api/v1/shortVideos/getFullInfo?video_id=${reel.short_videos_id}`}
+                      url={`${baseURL}/shortVideos/getFullInfo?video_id=${reel.short_videos_id}`}
                       className={`Demo__some-network__share-button ${stylesThree.icon}`}
                     >
                       <LinkedinIcon size={32} round />

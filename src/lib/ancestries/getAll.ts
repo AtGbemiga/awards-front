@@ -1,8 +1,8 @@
+import { baseURL } from "../../components/constants/url";
 import { AncestriesPostResponse } from "../../typesAndInterfaces/ancestries";
 async function getAllAncestriesPostFn(): Promise<AncestriesPostResponse> {
   // returns the most current posts
-  const url =
-    "https://e-awards.ooshinfo.com/api/v1/ancestries/getAllAncestriesPosts";
+  const url = `${baseURL}/ancestries/getAllAncestriesPosts`;
 
   const res = await fetch(url, {
     method: "GET",

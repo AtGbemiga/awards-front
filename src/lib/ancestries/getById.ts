@@ -1,3 +1,5 @@
+import { baseURL } from "../../components/constants/url";
+
 export interface AncestriesPostResponse {
   ancestries_posts: AncestriesPost[];
 }
@@ -23,7 +25,7 @@ async function getAncestriesPostByIdFn(
   ancestries_postid: string
 ): Promise<AncestriesPostResponse> {
   // returns the most current posts
-  const url = `https://e-awards.ooshinfo.com/api/v1/ancestries/getAncestriesPostById?ancestries_postid=${ancestries_postid}`;
+  const url = `${baseURL}/ancestries/getAncestriesPostById?ancestries_postid=${ancestries_postid}`;
 
   const res = await fetch(url, {
     method: "GET",

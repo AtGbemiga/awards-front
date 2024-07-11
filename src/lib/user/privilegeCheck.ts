@@ -1,9 +1,10 @@
 import Cookies from "js-cookie";
+import { baseURL } from "../../components/constants/url";
 
-async function privilegeCheckFn(): Promise<{ privilege: string }> {
+async function privilegeCheckFn(): Promise<{ message: string }> {
   const token = Cookies.get("token");
 
-  const url = "https://e-awards.ooshinfo.com/api/v1/users/privilegeCheck";
+  const url = `${baseURL}/users/checkIsAdmin`;
 
   const res = await fetch(url, {
     method: "GET",

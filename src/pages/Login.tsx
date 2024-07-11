@@ -2,7 +2,8 @@ import { authFn } from "../lib/user/auth";
 import { useState } from "react";
 import SubHeading from "../components/app/SubHeading";
 import styles from "./styles/login.module.css";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+// import globalStyles from "./styles/authForm/authForm.module.css";
 
 function LoginPage(): JSX.Element {
   const [email, setEmail] = useState("");
@@ -97,6 +98,14 @@ function LoginPage(): JSX.Element {
           Submit
         </button>
       </form>
+      {/* <section className={globalStyles.gafsection}>
+        <div>
+          <Link to="/forgotPassword">Forgot password?</Link>
+        </div>
+        <div>
+          Don't have an account? <Link to="/sign-up">Sign up</Link>
+        </div>
+      </section> */}
     </div>
   );
 }

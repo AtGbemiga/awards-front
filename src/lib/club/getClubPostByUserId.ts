@@ -3,11 +3,12 @@ import {
   ClubPostResponse,
   ClubPost404Response,
 } from "../../typesAndInterfaces/getClubPosts";
+import { baseURL } from "../../components/constants/url";
 
 export default async function getClubPostsByUserIdFn(): Promise<
   ClubPostResponse | ClubPost404Response
 > {
-  const url = `https://e-awards.ooshinfo.com/api/v1/club/getClubPostByUserId`;
+  const url = `${baseURL}/club/getClubPostByUserId`;
 
   const token = Cookies.get("token");
 

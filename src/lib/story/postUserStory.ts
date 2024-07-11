@@ -1,9 +1,10 @@
 import Cookies from "js-cookie";
+import { baseURL } from "../../components/constants/url";
 
 async function postUserStoryFn(formData: FormData) {
   const token = Cookies.get("token");
 
-  const url = "https://e-awards.ooshinfo.com/api/v1/story";
+  const url = `${baseURL}/story`;
 
   const res = await fetch(url, {
     method: "POST",

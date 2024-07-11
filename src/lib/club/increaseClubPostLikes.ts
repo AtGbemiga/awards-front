@@ -1,9 +1,11 @@
+import { baseURL } from "../../components/constants/url";
+
 async function increaseClubPostLikesFn({
   club_post_id,
 }: {
   club_post_id: number;
 }) {
-  const url = `https://e-awards.ooshinfo.com/api/v1/club/increaseClubPostLikes?club_post_id=${club_post_id}`;
+  const url = `${baseURL}/club/increaseClubPostLikes?club_post_id=${club_post_id}`;
 
   const res = await fetch(url, {
     method: "PUT",

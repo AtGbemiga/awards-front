@@ -31,19 +31,11 @@ function DisplayStatsParent() {
   }
 
   const rankingTable = getRankingByAwardIdQuery.data?.candidates.map(
-    (award) => (
-      <DisplayVoteStats
-        key={award.candidate}
-        {...award}
-      />
-    )
+    (award) => <DisplayVoteStats key={award.candidate} {...award} />
   );
 
   const awardOptions = getAwardIdQuery.data?.allAwards.map((award) => (
-    <option
-      key={award.award_id}
-      value={award.award_id}
-    >
+    <option key={award.award_id} value={award.award_id}>
       {award.award_name}
     </option>
   ));
@@ -73,7 +65,7 @@ function DisplayStatsParent() {
               <th>Percent</th>
             </tr>
           </thead>
-          <tbody>{rankingTable}</tbody>
+          {/* <tbody>{rankingTable}</tbody> */}
         </table>
       </div>
     </div>

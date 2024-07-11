@@ -1,4 +1,5 @@
 import Cookies from "js-cookie";
+import { baseURL } from "../../components/constants/url";
 
 export interface YourGroupResponse {
   yourGroups: YourGroup[];
@@ -12,7 +13,7 @@ export interface YourGroup {
 }
 
 export default async function clubMembershipFn(): Promise<YourGroupResponse> {
-  const url = `https://e-awards.ooshinfo.com/api/v1/club/getGroupsByMemberId`;
+  const url = `${baseURL}/club/getGroupsByMemberId`;
 
   const token = Cookies.get("token");
 

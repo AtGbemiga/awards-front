@@ -1,7 +1,8 @@
 import Cookies from "js-cookie";
+import { baseURL } from "../../components/constants/url";
 
 export default async function createMemberFn({ club_id }: { club_id: string }) {
-  const url = `https://e-awards.ooshinfo.com/api/v1/club/createClubMember?club_id=${club_id}`;
+  const url = `${baseURL}/club/createClubMember?club_id=${club_id}`;
 
   const token = Cookies.get("token");
 

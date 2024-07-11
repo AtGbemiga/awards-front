@@ -1,10 +1,11 @@
+import { baseURL } from "../components/constants/url";
 import { NominationForm } from "../typesAndInterfaces/nominationForm";
 import Cookies from "js-cookie";
 
 async function nominationFn({ formData }: { formData: NominationForm }) {
   const token = Cookies.get("token");
 
-  const url = "https://e-awards.ooshinfo.com/api/v1/nominate";
+  const url = `${baseURL}/nominate`;
 
   const res = await fetch(url, {
     method: "POST",

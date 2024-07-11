@@ -1,3 +1,4 @@
+import { baseURL } from "../../components/constants/url";
 import { Post } from "../../typesAndInterfaces/plan";
 import Cookies from "js-cookie";
 
@@ -8,7 +9,7 @@ async function getPostByIdWithCommentsFn({
 }): Promise<Post> {
   const token = Cookies.get("token");
   // returns the most current posts
-  const url = `https://e-awards.ooshinfo.com/api/v1/posts/getPostByIdWithComments?post_id=${post_id}`;
+  const url = `${baseURL}/posts/getPostByIdWithComments?post_id=${post_id}`;
 
   const res = await fetch(url, {
     method: "GET",

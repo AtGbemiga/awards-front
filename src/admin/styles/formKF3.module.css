@@ -23,7 +23,6 @@
 
 @layer formDivBase {
   .containerKF3 section {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
@@ -31,12 +30,7 @@
 
   .containerKF3 section > div {
     width: 40%;
-    border: 1px solid red;
   }
-}
-
-.containerKF3 {
-  border: 1px solid red;
 }
 
 .containerKF3 .navbar {

@@ -1,3 +1,4 @@
+import { baseURL } from "../../components/constants/url";
 import {
   ClubPostResponse,
   ClubPost404Response,
@@ -8,7 +9,7 @@ export default async function getClubPostsFn({
 }: {
   club_id: string;
 }): Promise<ClubPostResponse | ClubPost404Response> {
-  const url = `https://e-awards.ooshinfo.com/api/v1/club/getClubPost?club_id=${club_id}`;
+  const url = `${baseURL}/club/getClubPost?club_id=${club_id}`;
 
   const response = await fetch(url, {
     method: "GET",

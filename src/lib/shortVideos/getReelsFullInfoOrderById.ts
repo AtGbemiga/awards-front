@@ -1,3 +1,4 @@
+import { baseURL } from "../../components/constants/url";
 import { Response } from "../../typesAndInterfaces/shortVideos";
 
 async function getReelsFullInfoOrderByIdFn({
@@ -6,7 +7,7 @@ async function getReelsFullInfoOrderByIdFn({
   video_id: string;
 }): Promise<Response> {
   // returns the most current posts
-  const url = `https://e-awards.ooshinfo.com/api/v1/shortVideos/getFullInfo?video_id=${video_id}`;
+  const url = `${baseURL}/shortVideos/getFullInfo?video_id=${video_id}`;
 
   const res = await fetch(url, {
     method: "GET",

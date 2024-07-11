@@ -1,5 +1,7 @@
+import { baseURL } from "../../components/constants/url";
+
 async function updateVideoViewsFn({ video_id }: { video_id: number }) {
-  const url = `https://e-awards.ooshinfo.com/api/v1/shortVideos/updateVideoViewsCount?video_id=${video_id}`;
+  const url = `${baseURL}/shortVideos/updateVideoViewsCount?video_id=${video_id}`;
 
   const res = await fetch(url, {
     method: "PUT",

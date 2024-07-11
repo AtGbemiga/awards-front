@@ -1,4 +1,5 @@
 import Cookies from "js-cookie";
+import { baseURL } from "../../components/constants/url";
 
 export interface ClubMemberResponse {
   clubMember: ClubMember[];
@@ -19,7 +20,7 @@ export default async function getClubMember4JoinBtnFn({
 }: {
   club_id: string;
 }): Promise<ClubMemberResponse | AlternativeClubMemberResponse> {
-  const url = `https://e-awards.ooshinfo.com/api/v1/club/getClubMember4JoinBtn?club_id=${club_id}`;
+  const url = `${baseURL}/club/getClubMember4JoinBtn?club_id=${club_id}`;
 
   const token = Cookies.get("token");
 

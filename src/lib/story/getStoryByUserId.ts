@@ -1,4 +1,5 @@
 import Cookies from "js-cookie";
+import { baseURL } from "../../components/constants/url";
 
 export interface GetStoryByUserIdResponse {
   stories: StoryByUserId[];
@@ -11,7 +12,7 @@ export interface StoryByUserId {
 }
 
 async function getStoryByUserIdFn(): Promise<GetStoryByUserIdResponse> {
-  const url = "https://e-awards.ooshinfo.com/api/v1/story/getStoryByUserId";
+  const url = `${baseURL}/story/getStoryByUserId`;
 
   const token = Cookies.get("token");
 

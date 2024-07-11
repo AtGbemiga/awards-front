@@ -1,10 +1,11 @@
 import Cookies from "js-cookie";
 import { GetUserInfoResponse } from "../../typesAndInterfaces/getUserInfo";
+import { baseURL } from "../../components/constants/url";
 
 async function getUserInfoFn(): Promise<GetUserInfoResponse> {
   const token = Cookies.get("token");
 
-  const url = "https://e-awards.ooshinfo.com/api/v1/users/getUserInfo";
+  const url = `${baseURL}/users/getUserInfo`;
 
   const res = await fetch(url, {
     method: "GET",

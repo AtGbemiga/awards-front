@@ -28,6 +28,7 @@ import {
 import Cookies from "js-cookie";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { baseURL } from "../components/constants/url";
 
 type Props = {
   club: Club;
@@ -216,7 +217,7 @@ function DynamicGroupPageReusable({
                 <div className={stylesThree.socialIconsDiv}>
                   <div className="Demo__some-network">
                     <WhatsappShareButton
-                      url={`http://localhost:3001/group/${club.club_id}`}
+                      url={`${baseURL}/group/${club.club_id}`}
                       title={`Pride of Nigeria | ${club.club_name}`}
                       separator=":: "
                       className={`Demo__some-network__share-button ${stylesThree.icon}`}
@@ -226,7 +227,7 @@ function DynamicGroupPageReusable({
                   </div>
                   <div className="Demo__some-network">
                     <FacebookShareButton
-                      url={`https://localhost:3001/group/${club.club_id}`}
+                      url={`${baseURL}/group/${club.club_id}`}
                       className={`Demo__some-network__share-button ${stylesThree.icon}`}
                     >
                       <FacebookIcon size={32} round />
@@ -234,7 +235,7 @@ function DynamicGroupPageReusable({
                   </div>
                   <div className="Demo__some-network">
                     <TwitterShareButton
-                      url={`http://localhost:3001/group/${club.club_id}`}
+                      url={`${baseURL}/group/${club.club_id}`}
                       title={`Pride of Nigeria | ${club.club_name}`}
                       className={`Demo__some-network__share-button ${stylesThree.icon}`}
                     >
@@ -243,7 +244,7 @@ function DynamicGroupPageReusable({
                   </div>
                   <div className="Demo__some-network">
                     <LinkedinShareButton
-                      url={`http://localhost:3001/group/${club.club_id}`}
+                      url={`${baseURL}/group/${club.club_id}`}
                       className={`Demo__some-network__share-button ${stylesThree.icon}`}
                     >
                       <LinkedinIcon size={32} round />

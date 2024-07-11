@@ -1,4 +1,5 @@
 import Cookies from "js-cookie";
+import { baseURL } from "../../components/constants/url";
 
 async function postAncestriesCommentFn({
   post_id,
@@ -9,7 +10,7 @@ async function postAncestriesCommentFn({
 }) {
   const token = Cookies.get("token");
 
-  const url = `https://e-awards.ooshinfo.com/api/v1/ancestries/addComment?post_id=${post_id}`;
+  const url = `${baseURL}/ancestries/addComment?post_id=${post_id}`;
 
   const res = await fetch(url, {
     method: "POST",

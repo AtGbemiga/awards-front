@@ -1,17 +1,14 @@
 import { baseURL } from "../../components/constants/url";
-
-async function updateClubPostViewsFn({
-  club_post_id,
-}: {
-  club_post_id: number;
-}) {
-  const url = `${baseURL}/club/increaseClubPostViews?club_post_id=${club_post_id}`;
+import { token } from "../user/getToken";
+async function createAncestryPostFn(formData: FormData) {
+  const url = `${baseURL}/ancestries`;
 
   const res = await fetch(url, {
-    method: "PUT",
+    method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
     },
+    body: formData,
   });
 
   // check for if res fails
@@ -24,6 +21,7 @@ async function updateClubPostViewsFn({
 
   // get good res at this stage
   const data = await res.json();
+
   return data;
 }
-export default updateClubPostViewsFn;
+export default createAncestryPostFn;

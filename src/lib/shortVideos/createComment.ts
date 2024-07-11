@@ -1,4 +1,5 @@
 import Cookies from "js-cookie";
+import { baseURL } from "../../components/constants/url";
 
 async function createCommentFn({
   video_id,
@@ -9,7 +10,7 @@ async function createCommentFn({
 }) {
   const token = Cookies.get("token");
 
-  const url = `https://e-awards.ooshinfo.com/api/v1/shortVideos/createComment`;
+  const url = `${baseURL}/shortVideos/createComment`;
 
   const res = await fetch(url, {
     method: "POST",

@@ -1,9 +1,10 @@
 // fetch 3 winners from posts to display on the home page
 
+import { baseURL } from "../components/constants/url";
 import { Response } from "../typesAndInterfaces/plan";
 
 async function fetchPostsFn(): Promise<Response> {
-  const url = "https://e-awards.ooshinfo.com/api/v1/posts/getWinnersOnHomePage";
+  const url = `${baseURL}/posts/getWinnersOnHomePage`;
 
   const res = await fetch(url, {
     method: "GET",

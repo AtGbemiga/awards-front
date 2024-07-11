@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./secondPromotionsSection.module.css";
 
 function SecondPromotionsSection() {
@@ -18,7 +19,7 @@ function SecondPromotionsSection() {
               and family and dissolve every form of doubt by studying on thiss
               people...
             </p>
-            <button>Learn more</button>
+            <Link to="/nominate">Learn more</Link>
           </div>
         </div>
         <div className={styles.topCard}>
@@ -35,7 +36,7 @@ function SecondPromotionsSection() {
               and family and dissolve every form of doubt by studying on thiss
               people...
             </p>
-            <button>Learn more</button>
+            <Link to="/nominate">Learn more</Link>
           </div>
         </div>
       </div>
@@ -55,7 +56,7 @@ function SecondPromotionsSection() {
               and family and dissolve every form of doubt by studying on thiss
               people...
             </p>
-            <button>Learn more</button>
+            <Link to="/nominate">Learn more</Link>
           </div>
         </div>
         <div className={styles.bottomCard}>
@@ -72,7 +73,7 @@ function SecondPromotionsSection() {
               and family and dissolve every form of doubt by studying on thiss
               people...
             </p>
-            <button>Learn more</button>
+            <Link to="/nominate">Learn more</Link>
           </div>
         </div>
         <div className={styles.bottomCard}>
@@ -89,7 +90,7 @@ function SecondPromotionsSection() {
               and family and dissolve every form of doubt by studying on thiss
               people...
             </p>
-            <button>Learn more</button>
+            <Link to="/nominate">Learn more</Link>
           </div>
         </div>
       </div>

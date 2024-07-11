@@ -1,4 +1,5 @@
 import Cookies from "js-cookie";
+import { baseURL } from "../../components/constants/url";
 
 export const changePasswordFn = async ({
   oldPassword,
@@ -9,7 +10,7 @@ export const changePasswordFn = async ({
   newPassword: string;
   setErrMsg: React.Dispatch<React.SetStateAction<string>>;
 }) => {
-  const url = "https://e-awards.ooshinfo.com/api/v1/users/changePassword";
+  const url = `${baseURL}/users/changePassword`;
 
   const token = Cookies.get("token");
 

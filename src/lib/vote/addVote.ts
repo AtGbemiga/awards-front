@@ -1,4 +1,5 @@
 import Cookies from "js-cookie";
+import { baseURL } from "../../components/constants/url";
 
 async function addVoteFn({
   award_id,
@@ -7,7 +8,7 @@ async function addVoteFn({
   award_id: string;
   candidate: string;
 }) {
-  const url = `https://e-awards.ooshinfo.com/api/v1/vote/addVote?award_id=${award_id}`;
+  const url = `${baseURL}/vote/addVote?award_id=${award_id}`;
 
   const token = Cookies.get("token");
 

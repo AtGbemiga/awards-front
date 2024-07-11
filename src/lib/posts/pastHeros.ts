@@ -1,9 +1,9 @@
+import { baseURL } from "../../components/constants/url";
 import { Response } from "../../typesAndInterfaces/plan";
 
 async function pastHerosFn(): Promise<Response> {
   // returns the most current posts
-  const url =
-    "https://e-awards.ooshinfo.com/api/v1/posts/getPostsByTagPastHeros";
+  const url = `${baseURL}/posts/getPostsByTagPastHeros`;
 
   const res = await fetch(url, {
     method: "GET",

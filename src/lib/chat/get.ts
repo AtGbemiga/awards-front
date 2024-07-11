@@ -1,4 +1,5 @@
 import Cookies from "js-cookie";
+import { baseURL } from "../../components/constants/url";
 
 export interface ChatResponse {
   message: string;
@@ -20,7 +21,7 @@ async function getChatFn({
 }): Promise<ChatResponse> {
   const token = Cookies.get("token");
 
-  const url = `https://e-awards.ooshinfo.com/api/v1/chat?sender_id=${sender_id}`;
+  const url = `${baseURL}/chat?sender_id=${sender_id}`;
 
   const res = await fetch(url, {
     method: "GET",

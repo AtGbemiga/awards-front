@@ -1,3 +1,4 @@
+import { baseURL } from "../../components/constants/url";
 import { StoryByStoryIdResponse } from "../../typesAndInterfaces/getStoryByStoryId";
 
 async function getStoryByStoryIdFn({
@@ -5,7 +6,7 @@ async function getStoryByStoryIdFn({
 }: {
   story_id: string;
 }): Promise<StoryByStoryIdResponse> {
-  const url = `https://e-awards.ooshinfo.com/api/v1/story/getStoryByStoryId?story_id=${story_id}`;
+  const url = `${baseURL}/story/getStoryByStoryId?story_id=${story_id}`;
 
   const res = await fetch(url, {
     method: "GET",

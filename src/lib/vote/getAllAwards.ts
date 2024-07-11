@@ -1,7 +1,8 @@
+import { baseURL } from "../../components/constants/url";
 import { AllAwardsResponse } from "../../typesAndInterfaces/getAllAwards";
 
 async function getAllAwardsFn(): Promise<AllAwardsResponse> {
-  const url = "https://e-awards.ooshinfo.com/api/v1/vote";
+  const url = `${baseURL}/vote`;
 
   const res = await fetch(url, {
     method: "GET",

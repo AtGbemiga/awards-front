@@ -1,5 +1,6 @@
 import Cookies from "js-cookie";
 import { Auth } from "../../typesAndInterfaces/auth";
+import { baseURL } from "../../components/constants/url";
 
 export const authFn = async (
   {
@@ -23,11 +24,11 @@ export const authFn = async (
 
   // identifier is either login, signup or reset password
   if (identifier === "login") {
-    url = "https://e-awards.ooshinfo.com/api/v1/users/login";
+    url = `${baseURL}/users/login`;
   } else if (identifier === "register") {
-    url = "https://e-awards.ooshinfo.com/api/v1/users";
-  } else if (identifier === "resetPassword") {
-    url = "https://e-awards.ooshinfo.com/api/v1/auth/reset-password";
+    url = `${baseURL}/users`;
+  } else if (identifier === `resetPassword`) {
+    url = `${baseURL}/auth/reset-password`;
   } else {
     throw new Error("Invalid identifier");
   }

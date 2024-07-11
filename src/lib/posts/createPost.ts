@@ -1,6 +1,7 @@
+import { baseURL } from "../../components/constants/url";
 import { token } from "../user/getToken";
 async function createPostFn(formData: FormData) {
-  const url = "https://e-awards.ooshinfo.com/api/v1/posts";
+  const url = `${baseURL}/posts`;
 
   const res = await fetch(url, {
     method: "POST",

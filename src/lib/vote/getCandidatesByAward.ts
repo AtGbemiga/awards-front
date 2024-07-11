@@ -1,5 +1,6 @@
 import Cookies from "js-cookie";
 import { CandidateResponse } from "../../typesAndInterfaces/getCandidatesByAward";
+import { baseURL } from "../../components/constants/url";
 
 async function getCandidatesByAwardFn({
   award_id,
@@ -8,7 +9,7 @@ async function getCandidatesByAwardFn({
   award_id: string;
   setErrMsg: React.Dispatch<React.SetStateAction<string>>;
 }): Promise<CandidateResponse> {
-  const url = `https://e-awards.ooshinfo.com/api/v1/vote/getAwardCandidates?award_id=${award_id}`;
+  const url = `${baseURL}/vote/getAwardCandidates?award_id=${award_id}`;
 
   const token = Cookies.get("token");
 

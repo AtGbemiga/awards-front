@@ -70,7 +70,7 @@
   flex-shrink: 0;
 }
 
-.topCardContent button {
+.topCardContent a {
   display: flex;
   width: 16.5rem;
   height: 2rem;
@@ -91,7 +91,7 @@
   margin: 0 auto;
 }
 
-.topCardContent button:hover {
+.topCardContent a:hover {
   cursor: pointer;
 }
 /* hr*/
@@ -155,7 +155,7 @@
   flex-shrink: 0;
 }
 
-.bottomCardContent button {
+.bottomCardContent a {
   display: flex;
   width: 16.5rem;
   height: 2rem;
@@ -176,7 +176,7 @@
   margin: 0 auto;
 }
 
-.bottomCardContent button:hover {
+.bottomCardContent a:hover {
   cursor: pointer;
 }
 

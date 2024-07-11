@@ -1,3 +1,4 @@
+import { baseURL } from "../../components/constants/url";
 import { AncestriesPostCommentsResponse } from "../../typesAndInterfaces/ancestriesPostComments";
 
 async function getAncestriesPostCommentsFn({
@@ -6,7 +7,7 @@ async function getAncestriesPostCommentsFn({
   ancestries_postid: string;
 }): Promise<AncestriesPostCommentsResponse> {
   // returns the most current posts
-  const url = `https://e-awards.ooshinfo.com/api/v1/ancestries/getCommentsByPostId?ancestries_postid=${ancestries_postid}`;
+  const url = `${baseURL}/ancestries/getCommentsByPostId?ancestries_postid=${ancestries_postid}`;
 
   const res = await fetch(url, {
     method: "GET",

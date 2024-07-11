@@ -1,7 +1,8 @@
+import { baseURL } from "../../components/constants/url";
 import returnJWT from "../../components/global/returnJWT";
 
 async function uploadShortVideoFn(formData: FormData) {
-  const url = `https://e-awards.ooshinfo.com/api/v1/shortVideos`;
+  const url = `${baseURL}/shortVideos`;
 
   const res = await fetch(url, {
     method: "POST",

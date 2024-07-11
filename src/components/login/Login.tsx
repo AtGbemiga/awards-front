@@ -1,6 +1,7 @@
 import { authFn } from "../../lib/user/auth";
 import { useState } from "react";
 import styles from "../register/register.module.css";
+import { Link } from "react-router-dom";
 
 type Props = {
   passedEmail?: string;
@@ -36,10 +37,7 @@ function Login({ passedEmail, setDisplayRegisterForm }: Props): JSX.Element {
       >
         X
       </div>
-      <form
-        onSubmit={handleSubmit}
-        className={styles.form}
-      >
+      <form onSubmit={handleSubmit} className={styles.form}>
         {errMsg && <p className={styles.errMsg}>{errMsg}</p>}
         <div>
           <div className={styles.label}>
@@ -96,9 +94,17 @@ function Login({ passedEmail, setDisplayRegisterForm }: Props): JSX.Element {
           className={prevent ? `${styles.disabled}` : `${styles.submitBtn}`}
           disabled={prevent}
         >
-          Submit
+          Submits
         </button>
       </form>
+      {/* <section>
+        <div>
+          <Link to="/forgotPassword">Forgot password?</Link>
+        </div>
+        <div>
+          Don't have an account? <Link to="/sign-up">Sign up</Link>
+        </div>
+      </section> */}
     </div>
   );
 }

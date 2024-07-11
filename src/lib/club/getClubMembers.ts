@@ -1,3 +1,5 @@
+import { baseURL } from "../../components/constants/url";
+
 export interface ClubMemberResponse {
   clubMembers: ClubMember[];
 }
@@ -14,7 +16,7 @@ export default async function getClubMembersFn({
 }: {
   club_id: string;
 }): Promise<ClubMemberResponse> {
-  const url = `https://e-awards.ooshinfo.com/api/v1/club/getClubMembers?club_id=${club_id}`;
+  const url = `${baseURL}/club/getClubMembers?club_id=${club_id}`;
 
   const response = await fetch(url, {
     method: "GET",

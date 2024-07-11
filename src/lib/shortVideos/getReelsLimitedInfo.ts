@@ -1,7 +1,8 @@
+import { baseURL } from "../../components/constants/url";
 import { Response } from "../../typesAndInterfaces/shortVideos";
 
 async function getReelsLimitedInfoFn(): Promise<Response> {
-  const url = "https://e-awards.ooshinfo.com/api/v1/shortVideos";
+  const url = `${baseURL}/shortVideos`;
 
   const res = await fetch(url, {
     method: "GET",

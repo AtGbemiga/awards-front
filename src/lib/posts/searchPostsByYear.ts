@@ -1,3 +1,4 @@
+import { baseURL } from "../../components/constants/url";
 import { Response } from "../../typesAndInterfaces/plan";
 
 async function searchPostsByYear({
@@ -6,8 +7,7 @@ async function searchPostsByYear({
   year: string;
 }): Promise<Response> {
   // returns the most current posts
-  const url =
-    "https://e-awards.ooshinfo.com/api/v1/posts/getPostsByYear?year=" + year;
+  const url = `${baseURL}/posts/getPostsByYear?year=` + year;
 
   const res = await fetch(url, {
     method: "GET",

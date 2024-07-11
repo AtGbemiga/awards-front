@@ -1,7 +1,8 @@
+import { baseURL } from "../../components/constants/url";
 import { ClubOptionResponse } from "../../typesAndInterfaces/club";
 
 export default async function getGroupOptionLimit4Fn(): Promise<ClubOptionResponse> {
-  const url = `https://e-awards.ooshinfo.com/api/v1/club/getClubOptions`;
+  const url = `${baseURL}/club/getClubOptions`;
 
   const response = await fetch(url, {
     method: "GET",

@@ -1,3 +1,4 @@
+import { baseURL } from "../../components/constants/url";
 import { VideoCommentsResponse } from "../../typesAndInterfaces/getVideoComments";
 
 async function getVideoCommentsFn({
@@ -5,7 +6,7 @@ async function getVideoCommentsFn({
 }: {
   video_id: string;
 }): Promise<VideoCommentsResponse> {
-  const url = `https://e-awards.ooshinfo.com/api/v1/shortVideos/getShortVideosComments?video_id=${video_id}`;
+  const url = `${baseURL}/shortVideos/getShortVideosComments?video_id=${video_id}`;
 
   const res = await fetch(url, {
     method: "GET",

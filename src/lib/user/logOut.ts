@@ -1,9 +1,10 @@
 import Cookies from "js-cookie";
+import { baseURL } from "../../components/constants/url";
 
 async function logOutFn() {
   const token = Cookies.get("token");
 
-  const url = "https://e-awards.ooshinfo.com/api/v1/users/logout";
+  const url = `${baseURL}/users/logout`;
 
   const res = await fetch(url, {
     method: "POST",

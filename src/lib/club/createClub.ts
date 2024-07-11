@@ -1,5 +1,7 @@
+import { baseURL } from "../../components/constants/url";
+
 export default async function createClubFn(formData: FormData) {
-  const url = "https://e-awards.ooshinfo.com/api/v1/club";
+  const url = `${baseURL}/club`;
 
   const response = await fetch(url, {
     method: "POST",

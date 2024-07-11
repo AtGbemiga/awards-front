@@ -1,3 +1,5 @@
+import { baseURL } from "../../components/constants/url";
+
 export interface ClubPostSearchResponse {
   clubPosts: ClubPostSearch[];
 }
@@ -13,7 +15,7 @@ async function searchForClubFn({
 }: {
   club_name: string;
 }): Promise<ClubPostSearchResponse> {
-  const url = `https://e-awards.ooshinfo.com/api/v1/club/searchForClub?club_name=${encodeURIComponent(
+  const url = `${baseURL}/club/searchForClub?club_name=${encodeURIComponent(
     club_name
   )}`;
 
